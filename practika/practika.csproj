@@ -9,7 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
+=======
+>>>>>>> 8c13d2d005e2ea695a9633ba22b744c2128c1777
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,7 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Middlewares\" />
+=======
+    <Folder Include="Data\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Services\" />
+>>>>>>> 8c13d2d005e2ea695a9633ba22b744c2128c1777
   </ItemGroup>
 
 </Project>
