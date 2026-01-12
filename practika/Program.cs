@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
 using practika.Data;
+using practika.Models;
+using practika.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +14,8 @@ $"Username={Environment.GetEnvironmentVariable("DB_USER")};" +
 $"Password={Environment.GetEnvironmentVariable("DB_PASSWORD")}";
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(connectionString));
-=======
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
->>>>>>> 8c13d2d005e2ea695a9633ba22b744c2128c1777
+builder.Services.AddScoped<IScheduleService, ScheduleService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,10 +34,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-<<<<<<< HEAD
 app.UseRouting();
-=======
->>>>>>> 8c13d2d005e2ea695a9633ba22b744c2128c1777
+
 
 app.MapControllers();
 
