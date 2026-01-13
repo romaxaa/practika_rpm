@@ -2,9 +2,7 @@ bin/
 obj/
 .vs/
 *.user
-<<<<<<< HEAD
 *.suo
 *.log
-=======
 *.suo
->>>>>>> 8c13d2d005e2ea695a9633ba22b744c2128c1777
+

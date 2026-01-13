@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using practika.Data;
+using practika.Middlewares;
 using practika.Models;
 using practika.Services;
 
@@ -23,6 +24,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
